@@ -1,0 +1,19 @@
+:root {
+  --color-primary-ext-dark: #344e41;
+  --color-primary-dark: #3a5a40;
+  --color-primary: #588157;
+  --color-secondary: #a3b18a;
+  --color-text: #dad7cd;
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  --font-main: "Roboto", sans-serif;
+  --font-heading: "Poppins", sans-serif;
+
+  --border-radius: 8px;
+  --transition: 0.2s ease-in-out;
+}

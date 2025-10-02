@@ -1,0 +1,23 @@
+* {
+   font-family: 'Patrick Hand', cursive;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   background: #588157;
+}
+
+.flex-row {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
+}
+
+.flex-col {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
