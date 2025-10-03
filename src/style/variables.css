@@ -15,5 +15,16 @@
   --font-heading: "Poppins", sans-serif;
 
   --border-radius: 8px;
+  --gap: 5px;
   --transition: 0.2s ease-in-out;
+}
+
+.text-dark{
+   color: var(--color-primary-dark);
+}
+.text-base{
+   color: var(--color-text);
+}
+.text-light{
+   color: var(--color-secondary);
 }

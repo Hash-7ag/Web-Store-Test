@@ -21,3 +21,23 @@ body {
    align-items: center;
    flex-direction: column;
 }
+
+.pointer{
+   cursor: pointer;
+   transition: 0.2s ease-in-out;
+   overflow: hidden;
+}
+.pointer:hover{
+   scale: 1.15;
+}
+
+.hidden{
+   display: none;
+}
+
+.block{
+   display: block;
+}
+.gap{
+   gap: var(--gap);
+}

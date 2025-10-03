@@ -1,20 +1,28 @@
 import React from "react";
+import { useState } from "react";
 import styles from "./Header.module.css";
 import clsx from "clsx";
 import { FaShoppingBasket } from "react-icons/fa";
+import { FaLightbulb } from "react-icons/fa";
+import { FaRegLightbulb } from "react-icons/fa";
 
 function Header() {
+
+   const [showFirst, setShowFirst] = useState(true);
+
    return (
       <div className={clsx(styles.header, "flex-row")}>
          <div className={clsx(styles.logo, "flex-row")}>
             <img src="../src/assets/img/logo.png" alt="logo" />
-            <p>Live Life</p>
+            <p className="text-base">Live Life</p>
          </div>
 
-         <div className={clsx(styles.navbar_div, "flex-row",)}>
-            <input type="search" name="" id="" />
-            <FaShoppingBasket />
-            <div>
+         <div className={clsx(styles.navbar_div, "flex-row")}>
+            <input className="text-base" type="search" name="" id="" />
+            <div className="flex-row gap">
+               <FaShoppingBasket className="pointer text-base" />
+               <FaLightbulb className={clsx("pointer text-dark", showFirst ? "hidden" : "block")} onClick={()=>setShowFirst(true)}/>
+               <FaRegLightbulb className={clsx("pointer text-base", showFirst ? "block" : "hidden")} onClick={()=>setShowFirst(false)}/>
             </div>
          </div>
       </div>
