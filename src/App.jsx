@@ -3,14 +3,15 @@ import "./style/App.css";
 import PageContainter from "./container/PageContainter";
 import Header from "./components/Header/Header";
 import '@fontsource/patrick-hand';
+import ProductList from "./components/Products/ProductList";
 
 function App() {
-   const [count, setCount] = useState(0);
 
    return (
       <>
          <PageContainter>
             <Header />
+            <ProductList />
          </PageContainter>
       </>
    );
