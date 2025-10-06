@@ -1,43 +1,11 @@
-* {
-   font-family: 'Patrick Hand', cursive;
-}
-
 body {
    margin: 0;
    padding: 0;
    background: #588157;
 }
-
-.flex-row {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: row;
-}
-
-.flex-col {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-}
-
-.pointer{
-   cursor: pointer;
-   transition: 0.2s ease-in-out;
-   overflow: hidden;
-}
-.pointer:hover{
-   scale: 1.15;
-}
-
-.hidden{
-   display: none;
-}
-
-.block{
-   display: block;
-}
-.gap{
-   gap: var(--gap);
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
 }

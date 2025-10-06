@@ -1,7 +1,8 @@
 :root {
-  --color-primary-ext-dark: #344e41;
+  --color-primary-ext-dark: #2a412e;
   --color-primary-dark: #3a5a40;
   --color-primary: #588157;
+  --color-primary-light: #759a75;
   --color-secondary: #a3b18a;
   --color-text: #dad7cd;
 
@@ -11,12 +12,53 @@
   --spacing-lg: 24px;
   --spacing-xl: 32px;
 
-  --font-main: "Roboto", sans-serif;
-  --font-heading: "Poppins", sans-serif;
+  --font-hand: "Patrick Hand", cursive;
+  --font-main: 'Roboto Mono Variable', monospace;
 
   --border-radius: 8px;
   --gap: 5px;
   --transition: 0.2s ease-in-out;
+}
+
+.flex-row {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
+}
+.flex-col {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.w-full{
+   width: 100%;
+}
+
+.pointer{
+   cursor: pointer;
+   transition: 0.2s ease-in-out;
+   overflow: hidden;
+}
+.pointer:hover{
+   scale: 1.15;
+}
+.cursor-pointer{
+   cursor: pointer;
+}
+
+
+.hidden{
+   display: none;
+}
+.block{
+   display: block;
+}
+
+.gap{
+   gap: var(--gap);
 }
 
 .text-dark{
@@ -27,4 +69,15 @@
 }
 .text-light{
    color: var(--color-secondary);
+}
+
+.user-select-none {
+  user-select: none;
+}
+
+.font-main{
+   font-family: var(--font-main);
+}
+.font-hand{
+   font-family: var(--font-hand);
 }
