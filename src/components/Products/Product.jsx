@@ -1,20 +1,23 @@
 import React from 'react'
 import styles from './Product.module.css'
 import clsx from 'clsx';
+import { useNavigate } from 'react-router';
 
 function Product({product}) {
 
    const {id, title, price, description, category, image, rating: {rate, count}} = product
-   console.log(`
-      Product - ${id}
-      ${title}
-      ${price}
-      ${description}
-      ${category}
-      ${image}
-      ${rate}
-      ${count}`
-   );
+   // console.log(`
+   //    Product - Id:${id}
+   //    ${title}
+   //    ${price}
+   //    ${description}
+   //    ${category}
+   //    ${image}
+   //    ${rate}
+   //    ${count}`
+   // );
+
+   const navigate = useNavigate();
   return (
     <div className={clsx(styles.product_card,"text-light font-main")}>
          <div>
@@ -22,7 +25,7 @@ function Product({product}) {
             <p>{title}</p>
          </div>
          <h3>{price}$</h3>
-         <button>DETAILS</button>
+         <button onClick={()=>navigate('/product-details/' + id)}>DETAILS</button>
     </div>
   )
 }

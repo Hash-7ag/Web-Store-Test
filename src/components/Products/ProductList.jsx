@@ -6,7 +6,7 @@ import Product from './Product';
 function ProductList() {
    const dispach = useDispatch();
    const {products} = useSelector((store)=> store.product);
-   console.log(products)
+   // console.log(products)
 
    useEffect(()=>{
       dispach(getAllProducts())
