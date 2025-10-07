@@ -4,6 +4,7 @@ import { useParams } from 'react-router'
 import { setSelectedProduct, getAllProducts } from '../components/Products/productsSlice';
 import { LuCirclePlus } from "react-icons/lu";
 import { LuCircleMinus } from "react-icons/lu";
+import { addToBasket } from '../components/Basket/basketSlice';
 
 function ProductDetails() {
    const {id} = useParams();
@@ -26,6 +27,19 @@ function ProductDetails() {
       else{
          setValue((prev) => prev-1);
       }
+   }
+
+   const addBasket = ()=>{
+      const payload = {
+         id,
+         price,
+         image,
+         title,
+         description,
+         count: value
+      }
+
+      dispatch(addToBasket(payload));
    }
 
    console.log(selectedProduct);
@@ -82,7 +96,7 @@ function ProductDetails() {
                   <LuCirclePlus onClick={increment} className='pointer' />
                </div>
 
-               <button className='button' style={{fontSize: '1.2rem'}}>Add To Basket</button>
+               <button onClick={addBasket} className='button' style={{fontSize: '1.2rem'}}>Add To Basket</button>
 
             </div>
             <div className='user-select-none'>{description}</div>

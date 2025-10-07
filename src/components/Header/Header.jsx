@@ -5,6 +5,7 @@ import { FaLightbulb } from "react-icons/fa";
 import { FaRegLightbulb } from "react-icons/fa";
 import styles from "./Header.module.css";
 import clsx from "clsx";
+import Badge from '@mui/material/Badge';
 
 function Header() {
 
@@ -20,7 +21,22 @@ function Header() {
          <div className={clsx(styles.navbar_div, "flex-row")}>
             <input className="text-base font-hand" type="search" name="" id="" />
             <div className="flex-row gap">
-               <FaShoppingBasket className="pointer text-base" />
+               <Badge 
+                 badgeContent={4} 
+                 sx={{
+                   "& .MuiBadge-badge": {
+                     backgroundColor: "#c5b232ff",
+                     color: "#3a5a40",
+                     fontFamily: 'Patrick Hand',
+                     fontSize: '0.9rem',
+                     marginTop: '4px',
+                     marginRight: '3px',
+                     userSelect: 'none'
+                   },
+                 }}
+               >
+                 <FaShoppingBasket className="pointer text-base" />
+               </Badge>
                <FaLightbulb className={clsx("pointer text-dark", showFirst ? "hidden" : "block")} onClick={()=>setShowFirst(true)}/>
                <FaRegLightbulb className={clsx("pointer text-base", showFirst ? "block" : "hidden")} onClick={()=>setShowFirst(false)}/>
             </div>
