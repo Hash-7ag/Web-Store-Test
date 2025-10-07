@@ -12,9 +12,9 @@ function Header() {
 
    return (
       <div className={clsx(styles.header, "flex-row font-hand")}>
-         <div className={clsx(styles.logo, "flex-row")}>
+         <div className={clsx(styles.logo, "flex-row user-select-none")}>
             <img src="../src/assets/img/logo.png" alt="logo" />
-            <p className="text-base user-select-none">Live Life</p>
+            <p className="text-base">Live Life</p>
          </div>
 
          <div className={clsx(styles.navbar_div, "flex-row")}>

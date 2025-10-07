@@ -25,7 +25,7 @@ function Product({product}) {
             <p>{title}</p>
          </div>
          <h3>{price}$</h3>
-         <button onClick={()=>navigate('/product-details/' + id)}>DETAILS</button>
+         <button className='button' onClick={()=>navigate('/product-details/' + id)}>DETAILS</button>
     </div>
   )
 }

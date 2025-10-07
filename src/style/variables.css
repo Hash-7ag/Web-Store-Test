@@ -81,3 +81,19 @@
 .font-hand{
    font-family: var(--font-hand);
 }
+
+.button{
+   padding: 10px 20px;
+   border-radius: 20px;
+   border: none;
+   color: var(--color-text);
+   background: var(--color-primary-ext-dark);
+   margin-bottom: 20px;
+   cursor: pointer;
+   transition: transform 0.2s ease; 
+   transform-origin: center;
+   user-select: none;
+}
+.button:hover{
+   transform: scale(1.1);
+}

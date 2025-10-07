@@ -47,22 +47,6 @@
 }
 
 
-.product_card>button{
-   padding: 10px 20px;
-   border-radius: 20px;
-   border: none;
-   color: var(--color-text);
-   background: var(--color-primary-ext-dark);
-   margin-bottom: 20px;
-   cursor: pointer;
-   transition: transform 0.2s ease; 
-   transform-origin: center;
-}
-.product_card>button:hover{
-   transform: scale(1.1);
-}
-
-
 .product_img{
    width: 140px;
    height: 160px;
